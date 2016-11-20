@@ -24,8 +24,7 @@ if limit != 0:
 	with open(list) as comp:
 		for i, line in enumerate(comp):
 			if i == numC:
-				sendMail("6504006400@vtext.com", line, "verizon")
-#				sendMail("6507991555@txt.att.net", line)
+				sendMail("PHONENUNMBER@vext.com", line, "verizon")
 			elif i > numC:
 				break
 	remove_line(list, numC)  
@@ -34,8 +33,7 @@ else:
 
 
 if oldIP != newIP:
-	# want to send from different email server.login("tifmrp1324@gmail.com", "wussgood$$")
-        sendMail("6504006400@vtext.com", newIP, "verizon")
+        sendMail("PHONENUMBER@vtext.com", newIP, "verizon")
 	with open('tempIP', 'w') as f:
 		f.write(newIP)
 	with open('IPlogchange.txt', 'a') as log:
