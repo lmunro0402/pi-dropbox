@@ -4,8 +4,7 @@ import smtplib, time
 # do not remove this. It starts the server to send mail
 server = smtplib.SMTP('smtp.gmail.com', 587)
 server.starttls()
-server.login("tifmrp1324ip@gmail.com", "wussgood$$")
-# server.login("thethinkingblueprint@gmail.com", "Xylum1208")
+server.login("EMAIL@gmail.com", "PASSWORD")
 # can't login to both will use the first one
 
 def get_line(file):
@@ -55,15 +54,15 @@ def sendMail(pNum, msg, carrier):
    		limit = 150
     		time.sleep(10)
 		if len(msg) < limit:
-    			server.sendmail("tifmrp1324ip@gmail.com", pNum, msg)
+    			server.sendmail("EMAIL@gmail.com", pNum, msg)
 		        return None
 		if len(msg) < 201: #for aesthetics 
 			limit = 100
     		tEnd = limit - msg[limit:0:-1].find(" ")
     		if tEnd == limit+1:
-	        	server.sendmail("tifmrp1324ip@gmail.com", pNum, msg[0:limit])
+	        	server.sendmail("EMAILp@gmail.com", pNum, msg[0:limit])
        		        return sendMail(pNum, msg[limit:], carrier)
    	        else:
-			server.sendmail("tifmrp1324ip@gmail.com", pNum, msg[0:tEnd])
+			server.sendmail("EMAIL@gmail.com", pNum, msg[0:tEnd])
        		        return sendMail(pNum, msg[tEnd+1:], carrier)
 	return None
